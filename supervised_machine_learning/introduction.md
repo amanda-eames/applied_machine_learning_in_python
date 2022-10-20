@@ -29,3 +29,8 @@ Given a training set x_train and labels y_train, to classify a new instance x_te
 ## Linear Regression: Least-Squares
 * A linear model is a sum of wieghted variables that predict a target output value given the input data instance. Least-squares, minimises the sum of squared differences between the predicted target values and actual values.
 * The learning algorithm finds the parameters tht optimise an objective function, typically to minimise some kind of loss function of the predicted target values vs actual target values (i.e., some penalty function) 
+
+
+## Ridge Regression
+* Uses the same least-squares criterion but adds a pentaly for larger variations in weights, the addition of a penalty paramter is called regulisation. This helps to reduce overfitting by resticting the models complexity. 
+* Uses L2 regulisation, sum squares in weights. The influence of regularisation term is controled by a coefficient alpha. Higher alpha means more regulisation which means a simplier model
