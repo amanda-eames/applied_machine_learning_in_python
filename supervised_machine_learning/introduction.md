@@ -23,4 +23,5 @@ Given a training set x_train and labels y_train, to classify a new instance x_te
 * As we increase k, single training data points no longer have as dramatic an influence on the prediction. The result is a much smoother decision boundary, which represents a model with lower model complexity 
 * Can be used for regression as well, this looks like steps along the regression line. 
 * The R^2 regression score or the coefficient of determination, measures how well a predicted model for regression fits the data. The score is between 0 and 1, where 1 mean the model fits the data perfectly.
-
+* Pro's: simple and easy to understand why a prediction was made, and can be a good baseline to compare more sophisticaed methods. 
+* Con's when training data has alot of instances, or instance has alot of features this can impact heavily on performace (particularily if your data is sparse)
