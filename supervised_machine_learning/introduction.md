@@ -36,3 +36,7 @@ Given a training set x_train and labels y_train, to classify a new instance x_te
 * Uses L2 regulisation, sum squares in weights. The influence of regularisation term is controled by a coefficient alpha. Higher alpha means more regulisation which means a simplier model
 * Rational: large weights means the sum of there squared valued is large
 * Given the features can have different scales, we need to normalise the data so that ridge regression can behave more fairly for each feature. An exmaple of normaliasation is call min max scalling. 
+
+## Lasso Regression
+* Is an L1 penalty, take the absolute value of the weights rather then squared. The effect has the effect of setting parameter weight to zero, called a sparse solution a kind of feature selection
+* When we have many small/medium sized effects use ridge and when few variables with medium large effects use lasso.
