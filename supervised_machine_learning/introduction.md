@@ -25,3 +25,7 @@ Given a training set x_train and labels y_train, to classify a new instance x_te
 * The R^2 regression score or the coefficient of determination, measures how well a predicted model for regression fits the data. The score is between 0 and 1, where 1 mean the model fits the data perfectly.
 * Pro's: simple and easy to understand why a prediction was made, and can be a good baseline to compare more sophisticaed methods. 
 * Con's when training data has alot of instances, or instance has alot of features this can impact heavily on performace (particularily if your data is sparse)
+
+## Linear Regression: Least-Squares
+* A linear model is a sum of wieghted variables that predict a target output value given the input data instance. Least-squares, minimises the sum of squared differences between the predicted target values and actual values.
+* The learning algorithm finds the parameters tht optimise an objective function, typically to minimise some kind of loss function of the predicted target values vs actual target values (i.e., some penalty function) 
