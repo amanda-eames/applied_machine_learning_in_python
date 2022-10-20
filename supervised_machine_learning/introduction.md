@@ -34,3 +34,5 @@ Given a training set x_train and labels y_train, to classify a new instance x_te
 ## Ridge Regression
 * Uses the same least-squares criterion but adds a pentaly for larger variations in weights, the addition of a penalty paramter is called regulisation. This helps to reduce overfitting by resticting the models complexity. 
 * Uses L2 regulisation, sum squares in weights. The influence of regularisation term is controled by a coefficient alpha. Higher alpha means more regulisation which means a simplier model
+* Rational: large weights means the sum of there squared valued is large
+* Given the features can have different scales, we need to normalise the data so that ridge regression can behave more fairly for each feature. An exmaple of normaliasation is call min max scalling. 
