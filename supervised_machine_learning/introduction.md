@@ -50,3 +50,5 @@ Given a training set x_train and labels y_train, to classify a new instance x_te
 $$f(x,w,b) = sign(w \cdot x + b)$$
 * To evaluate the classifier one meteric is classifier margin, as the maximum width the decision boundary area can be increased before hitting a data point. The linear classifier with maximum margin is a linear support vector machine (LSVM)
 * Regualisation strength is determined by the C parameter, larger values mean less regularisation fits the training data well and smaller values are more tolerant of errors.  
+* Pro's: simple and easy to train, fast predictions, scales well to large datasets, works well with sparse data, can interpret results.
+* Con's for lower-dimentional data other methods are more suitable, data may not be linearly seperable. 
