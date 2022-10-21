@@ -40,3 +40,11 @@ Given a training set x_train and labels y_train, to classify a new instance x_te
 ## Lasso Regression
 * Is an L1 penalty, take the absolute value of the weights rather then squared. The effect has the effect of setting parameter weight to zero, called a sparse solution a kind of feature selection
 * When we have many small/medium sized effects use ridge and when few variables with medium large effects use lasso.
+
+## Non-linear realtionships
+* Polynomial features, we can apply non-linear transformations to create a new features that capture more complex relationships. Note need to keep in mind of polynomial feature expansion, this can lead to overfit. 
+* Logistic Regression is used for classification, apply a log function to compress the target values to between 0 and 1, naturally this be interpreted as a proabability. For binary classification, we interpret the value as the porbability of belonging to the positive class. We can also apply a the same penalty as L2 regularisation (this is turned on by default in sklearn)
+
+## Support Vector Machines
+* Linear classification 
+$$f(x,w,b) - sign(w \dot x + b)$$
