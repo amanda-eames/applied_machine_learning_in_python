@@ -46,5 +46,5 @@ Given a training set x_train and labels y_train, to classify a new instance x_te
 * Logistic Regression is used for classification, apply a log function to compress the target values to between 0 and 1, naturally this be interpreted as a proabability. For binary classification, we interpret the value as the porbability of belonging to the positive class. We can also apply a the same penalty as L2 regularisation (this is turned on by default in sklearn)
 
 ## Support Vector Machines
-* Linear classification 
-$$f(x,w,b) - sign(w \dot x + b)$$
+* Linear classification used a feature vector and the target value class is determined by the sign  
+$$f(x,w,b) - sign(w \cdot x + b)$$
