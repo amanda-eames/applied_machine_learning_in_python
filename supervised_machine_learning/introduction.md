@@ -64,3 +64,18 @@ $$f(x,w,b) = sign(w \cdot x + b)$$
 * Con's: Efficiency decreases as tranining set size increases, need careful nomalisation and parameter tuning, does not provide direct probabilty estimates, difficult to interpet why a prediction was made. 
 
 $$ K(x,x^{\prime}) = exp \[- \gamma \cdot ||x - x^{\prime} || ^2 \]$$
+
+## Cross-Validation
+*  Cross-validation is a method that goes beyond evaluating a single model using a single Train/Test split of the data by using multiple Train/Test splits, each of which is used to train and evaluate a separate model
+*   Cross-validation basically gives more stable and reliable estimates of how the classifiers likely to perform on average by running multiple different training test splits and then averaging the results, instead of relying entirely on a single particular training set.
+*   The most common type of cross-validation is k-fold cross-validation most commonly with K set to 5 or 10. For example, to do five-fold cross-validation, the original dataset is partitioned into five parts of equal or close to equal size.
+*   This extra information does come with extra cost. It does take more time and computation to do cross-validation.
+*   The Stratified Cross-validation means that when splitting the data, the proportions of classes in each fold are made as close as possible to the actual proportions of the classes in the overall data set as shown here
+
+## Decision Trees
+*  The generalisation of finding a set of rules that can learn to categorize an object into the correct category to many other classification tasks. 
+*  Pure node (all one class, perfect classification) mixed node (mixture of classes), teh prediction will just be the majority class at that node. 
+*  Can also be used for regression. 
+*  Typically such trees are overly complex and essentially memorized the training data. So when building decision trees, we need to use some additional strategy to prevent this overfitting
+*  One strategy to prevent overfitting is to prevent the tree from becoming really detailed and complex by stopping its growth early. This is called pre-pruning. Another strategy is to build a complete tree with pure leaves but then to prune back the tree into a simpler form. 
+
