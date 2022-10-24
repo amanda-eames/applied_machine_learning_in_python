@@ -56,4 +56,4 @@ $$f(x,w,b) = sign(w \cdot x + b)$$
 
 ## Kernalised Upport Vector Machines
 * This is used when linear support vector machines are not complex enough to capture the boundary. In essence, one way to think about what kernelized SVMs, is they take the original input data space and transform it to a new higher dimensional feature space, where it becomes much easier to classify the transform to data using a linear classifier.
-* Radial basis function kernal $$ K(\textbf{x}, \textbf{x}\prime) = exp[\mius \gamma \cdot ]
+* Radial basis function kernal $$ K(\textbf{x}, \textbf{x}\prime) = exp[\mius \gamma \cdot || x \minus x\prime || ^2] $$
