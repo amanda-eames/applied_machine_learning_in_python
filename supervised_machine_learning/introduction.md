@@ -52,3 +52,4 @@ $$f(x,w,b) = sign(w \cdot x + b)$$
 * Regualisation strength is determined by the C parameter, larger values mean less regularisation fits the training data well and smaller values are more tolerant of errors.  
 * Pro's: simple and easy to train, fast predictions, scales well to large datasets, works well with sparse data, can interpret results.
 * Con's for lower-dimentional data other methods are more suitable, data may not be linearly seperable. 
+* This approach can be used for multi-class classification, have a binary classifier for each class, either belong to the class or not. Then we get the training data, and passed to each of the class classifiers and then take the one with the highest probability.
