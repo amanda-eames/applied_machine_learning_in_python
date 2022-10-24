@@ -60,5 +60,6 @@ $$f(x,w,b) = sign(w \cdot x + b)$$
 * The kernel trick, is that internally, the algorithm doesn't have to perform this actual transformation on the data points to the new high dimensional feature space. Instead, the kernelized SVM can compute these more complex decision boundaries just in terms of similarity calculations between pairs of points in the high dimensional space where the transformed feature representation is implicit.
 * Can also have polynomial SVM, here the tranformation will be a polnomial of certain degree for the kernel.
 * The Gamma parameter is the kernel width parameter, which affects how tightly the decision boundaries end up surrounding points in the input space. Small gamma means a larger similarity radius. So that points farther apart are considered similar. Which results in more points being group together and smoother decision boundaries.
-
+* Pro's: Perform well on a range of daatsets, versatile different kernal function, work well for both low and high dimensional data
+* Con's: Efficiency decreases as tranining set size increases, need careful nomalisation and parameter tuning, does not provide direct probabilty estimates, difficult to interpet why a prediction was made. 
 $$ K(x,x^{\prime}) = exp \[- \gamma \cdot ||x - x^{\prime} || ^2 \]$$
