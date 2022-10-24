@@ -53,3 +53,7 @@ $$f(x,w,b) = sign(w \cdot x + b)$$
 * Pro's: simple and easy to train, fast predictions, scales well to large datasets, works well with sparse data, can interpret results.
 * Con's for lower-dimentional data other methods are more suitable, data may not be linearly seperable. 
 * This approach can be used for multi-class classification, have a binary classifier for each class, either belong to the class or not. Then we get the training data, and passed to each of the class classifiers and then take the one with the highest probability.
+
+## Kernalised Upport Vector Machines
+* This is used when linear support vector machines are not complex enough to capture the boundary. In essence, one way to think about what kernelized SVMs, is they take the original input data space and transform it to a new higher dimensional feature space, where it becomes much easier to classify the transform to data using a linear classifier.
+* Radial basis function kernal $$ K(\textbf{x}, \textbf{x}\prime) = exp[\mius \gamma \cdot ]
