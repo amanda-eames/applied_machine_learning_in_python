@@ -62,4 +62,5 @@ $$f(x,w,b) = sign(w \cdot x + b)$$
 * The Gamma parameter is the kernel width parameter, which affects how tightly the decision boundaries end up surrounding points in the input space. Small gamma means a larger similarity radius. So that points farther apart are considered similar. Which results in more points being group together and smoother decision boundaries.
 * Pro's: Perform well on a range of daatsets, versatile different kernal function, work well for both low and high dimensional data
 * Con's: Efficiency decreases as tranining set size increases, need careful nomalisation and parameter tuning, does not provide direct probabilty estimates, difficult to interpet why a prediction was made. 
+
 $$ K(x,x^{\prime}) = exp \[- \gamma \cdot ||x - x^{\prime} || ^2 \]$$
