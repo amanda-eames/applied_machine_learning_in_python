@@ -54,8 +54,11 @@ $$f(x,w,b) = sign(w \cdot x + b)$$
 * Con's for lower-dimentional data other methods are more suitable, data may not be linearly seperable. 
 * This approach can be used for multi-class classification, have a binary classifier for each class, either belong to the class or not. Then we get the training data, and passed to each of the class classifiers and then take the one with the highest probability.
 
-## Kernalised Upport Vector Machines
+## Kernalised Support Vector Machines
 * This is used when linear support vector machines are not complex enough to capture the boundary. In essence, one way to think about what kernelized SVMs, is they take the original input data space and transform it to a new higher dimensional feature space, where it becomes much easier to classify the transform to data using a linear classifier.
-* Radial basis function kernal 
+* Radial basis function kernal: what this looks like is all the point inside a certain radius are map to the same area in the feature space.  
+* The kernel trick, is that internally, the algorithm doesn't have to perform this actual transformation on the data points to the new high dimensional feature space. Instead, the kernelized SVM can compute these more complex decision boundaries just in terms of similarity calculations between pairs of points in the high dimensional space where the transformed feature representation is implicit.
+* Can also have polynomial SVM, here the tranformation will be a polnomial of certain degree for the kernel.
+* The Gamma parameter is the kernel width parameter, which affects how tightly the decision boundaries end up surrounding points in the input space. Small gamma means a larger similarity radius. So that points farther apart are considered similar. Which results in more points being group together and smoother decision boundaries.
 
 $$ K(x,x^{\prime}) = exp \[- \gamma \cdot ||x - x^{\prime} || ^2 \]$$
