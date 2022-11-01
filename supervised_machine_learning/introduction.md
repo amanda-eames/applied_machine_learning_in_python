@@ -94,6 +94,19 @@ linlasso = Lasso(alpha=2.0, max_iter = 10000).fit(X_train_scaled, y_train)
 * Polynomial features, we can apply non-linear transformations to create a new features that capture more complex relationships. Note need to keep in mind of polynomial feature expansion, this can lead to overfit. 
 * Logistic Regression is used for classification, apply a log function to compress the target values to between 0 and 1, naturally this be interpreted as a proabability. For binary classification, we interpret the value as the porbability of belonging to the positive class. We can also apply a the same penalty as L2 regularisation (this is turned on by default in sklearn)
 
+```python
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Ridge
+from sklearn.preprocessing import PolynomialFeatures
+
+poly = PolynomialFeatures(degree=2)
+X_poly = poly.fit_transform(X_F1)
+
+X_train, X_test, y_train, y_test = train_test_split(X_poly, y,random_state = 0)
+linreg = LinearRegression().fit(X_train, y_train)
+
+```
+
 ## Support Vector Machines
 * Linear classification used a feature vector and the target value class is determined by the sign. Note this is dot product. 
 $$f(x,w,b) = sign(w \cdot x + b)$$
