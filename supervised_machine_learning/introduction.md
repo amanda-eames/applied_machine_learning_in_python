@@ -58,6 +58,21 @@ linreg.score(X_test, y_test)
 * Rational: large weights means the sum of there squared valued is large
 * Given the features can have different scales, we need to normalise the data so that ridge regression can behave more fairly for each feature. An exmaple of normaliasation is call min max scalling. 
 
+```python
+from sklearn.linear_model import Ridge
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+
+X_train, X_test, y_train, y_test = train_test_split(X_crime, y_crime,random_state = 0)
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+linridge = Ridge(alpha=20.0).fit(X_train_scaled, y_train)
+linridge.intercept_
+linridge.coef_
+linridge.score(X_train_scaled, y_train)
+```
+
 ## Lasso Regression
 * Is an L1 penalty, take the absolute value of the weights rather then squared. The effect has the effect of setting parameter weight to zero, called a sparse solution a kind of feature selection
 * When we have many small/medium sized effects use ridge and when few variables with medium large effects use lasso.
