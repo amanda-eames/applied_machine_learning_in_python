@@ -77,6 +77,19 @@ linridge.score(X_train_scaled, y_train)
 * Is an L1 penalty, take the absolute value of the weights rather then squared. The effect has the effect of setting parameter weight to zero, called a sparse solution a kind of feature selection
 * When we have many small/medium sized effects use ridge and when few variables with medium large effects use lasso.
 
+```python
+from sklearn.linear_model import Lasso
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+
+X_train, X_test, y_train, y_test = train_test_split(X, y,random_state = 0)
+
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+linlasso = Lasso(alpha=2.0, max_iter = 10000).fit(X_train_scaled, y_train)
+```
+
 ## Non-linear realtionships
 * Polynomial features, we can apply non-linear transformations to create a new features that capture more complex relationships. Note need to keep in mind of polynomial feature expansion, this can lead to overfit. 
 * Logistic Regression is used for classification, apply a log function to compress the target values to between 0 and 1, naturally this be interpreted as a proabability. For binary classification, we interpret the value as the porbability of belonging to the positive class. We can also apply a the same penalty as L2 regularisation (this is turned on by default in sklearn)
