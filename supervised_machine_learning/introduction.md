@@ -26,6 +26,15 @@ Given a training set x_train and labels y_train, to classify a new instance x_te
 * Pro's: simple and easy to understand why a prediction was made, and can be a good baseline to compare more sophisticaed methods. 
 * Con's when training data has alot of instances, or instance has alot of features this can impact heavily on performace (particularily if your data is sparse)
 
+```python
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X_R1, y_R1, random_state = 0)
+knnreg = KNeighborsRegressor(n_neighbors = 5).fit(X_train, y_train)
+knnreg.predict(X_test)
+knnreg.score(X_test, y_test)
+```
+
 ## Linear Regression: Least-Squares
 * A linear model is a sum of wieghted variables that predict a target output value given the input data instance. Least-squares, minimises the sum of squared differences between the predicted target values and actual values.
 * The learning algorithm finds the parameters tht optimise an objective function, typically to minimise some kind of loss function of the predicted target values vs actual target values (i.e., some penalty function) 
