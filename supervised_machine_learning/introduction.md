@@ -29,6 +29,7 @@ Given a training set x_train and labels y_train, to classify a new instance x_te
 ```python
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.model_selection import train_test_split
+
 X_train, X_test, y_train, y_test = train_test_split(X_R1, y_R1, random_state = 0)
 knnreg = KNeighborsRegressor(n_neighbors = 5).fit(X_train, y_train)
 knnreg.predict(X_test)
