@@ -34,6 +34,10 @@ confusion = confusion_matrix(y_test, model_predicted)
 
 ### Confusion Matrices & Basic Evaluation Metrics
 
-Recall or True Positive Rate (TPR) is the fraction of all positive instances the classifer correctly identifies as positive 
+Recall or True Positive Rate (TPR) is the fraction of all positive instances the classifer correctly identifies as positive. We can increase the recall by increasing the number of TP or reducing the number of FN
 
-$$ Recall = TP/TP+FN $$
+$$ Recall = TP/(TP+FN) $$
+
+Another metrics is the False Positive Rate (FPR) fraction of all negative instances does the classifier incorrectly identify as positive 
+
+$$ FPR = FP/(TN+FP)$$
