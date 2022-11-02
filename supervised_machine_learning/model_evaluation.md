@@ -45,3 +45,11 @@ $$ FPR = FP/(TN+FP)$$
 There is a tradeoff between recall and precison and need to balance what is more important for the application. We have another metric that is the harmonic mean of precision and recall, called F1 score
 
 $$F_1 = 2 \dfrac{Precision \cdot Recall}{Precision + Recall} = \dfrac{2TP}{2TP+FN+FP}$$
+
+```python
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import classification_report
+
+accuracy_score(y_test, y_predicted)
+classification_report(y_test, y_predicted, target_names=['not 1', '1'])
+```
