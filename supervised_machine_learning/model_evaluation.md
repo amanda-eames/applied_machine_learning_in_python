@@ -41,3 +41,7 @@ $$ Recall = TP/(TP+FN) $$
 Another metrics is the False Positive Rate (FPR) fraction of all negative instances does the classifier incorrectly identify as positive 
 
 $$ FPR = FP/(TN+FP)$$
+
+There is a tradeoff between recall and precison and need to balance what is more important for the application. We have another metric that is the harmonic mean of precision and recall, called F1 score
+
+$$F_1 = 2 \dfract{Precision \cdot Recall}{Precision + Recall}$$
