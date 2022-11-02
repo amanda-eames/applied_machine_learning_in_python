@@ -159,10 +159,31 @@ SVC(kernel = 'poly', degree = 3).fit(X_train, y_train)
 *   This extra information does come with extra cost. It does take more time and computation to do cross-validation.
 *   The Stratified Cross-validation means that when splitting the data, the proportions of classes in each fold are made as close as possible to the actual proportions of the classes in the overall data set as shown here
 
+```python
+from sklearn.svm import SVC
+from sklearn.model_selection import validation_curve
+
+param_range = np.logspace(-3, 3, 4)
+train_scores, test_scores = validation_curve(SVC(), X, y,
+                                            param_name='gamma',
+                                            param_range=param_range, cv=3)
+```
+
 ## Decision Trees
 *  The generalisation of finding a set of rules that can learn to categorize an object into the correct category to many other classification tasks. 
 *  Pure node (all one class, perfect classification) mixed node (mixture of classes), teh prediction will just be the majority class at that node. 
 *  Can also be used for regression. 
 *  Typically such trees are overly complex and essentially memorized the training data. So when building decision trees, we need to use some additional strategy to prevent this overfitting
 *  One strategy to prevent overfitting is to prevent the tree from becoming really detailed and complex by stopping its growth early. This is called pre-pruning. Another strategy is to build a complete tree with pure leaves but then to prune back the tree into a simpler form. 
+
+```python
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X.data, y.target, random_state = 3)
+clf = DecisionTreeClassifier(max_depth = 3).fit(X_train, y_train)
+clf.score(X_train, y_train)
+clf.score(X_test, y_test)
+feat_importance = clf.tree_.compute_feature_importances(normalize=True)
+```
 
