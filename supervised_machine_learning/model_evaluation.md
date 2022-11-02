@@ -54,3 +54,20 @@ accuracy_score(y_test, y_predicted)
 classification_report(y_test, y_predicted, target_names=['not 1', '1'])
 ```
 
+### Precision-recall and ROC curves
+
+### Multi-Class Evaluation
+These are just an extention of the binary case, overall evaluation metrics are averaged across all classes and there are different ways to do this. 
+
+### Regression Evaluation
+Typically the r2_score is typically enough, and can be negative. The other alternatives are mean_absolute_error, mean_squared_error and median_absolute error (robust to outliers)
+
+```python
+from sklearn.dummy import DummyRegressor
+from sklearn.metrics import mean_squared_error, r2_score
+
+lm_dummy_mean = DummyRegressor(strategy = 'mean').fit(X_train, y_train)
+y_predict_dummy_mean = lm_dummy_mean.predict(X_test)
+mean_squared_error(y_test, y_predict_dummy_mean)
+r2_score(y_test, y_predict_dummy_mean)
+```
