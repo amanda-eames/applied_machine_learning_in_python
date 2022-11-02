@@ -44,4 +44,4 @@ $$ FPR = FP/(TN+FP)$$
 
 There is a tradeoff between recall and precison and need to balance what is more important for the application. We have another metric that is the harmonic mean of precision and recall, called F1 score
 
-$$F_1 = 2 \dfract{Precision \cdot Recall}{Precision + Recall}$$
+$$F_1 = 2 \dfrac{Precision \cdot Recall}{Precision + Recall}$$
