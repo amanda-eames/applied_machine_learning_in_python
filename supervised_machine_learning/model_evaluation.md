@@ -10,7 +10,7 @@ By way of example, imagine we have a classifier for fraudulent actitivity we wou
 activity). However, the other 1% may be fruadulent, if we evalute performance on accuracy alone even a classifier that just assigns everything to the postitive class 
 will have an accuracy of 99%.
 
-In a binary classifier we have four scenarios, TP (True Positive), TN (True Negative), FP (False Positive, Type 1 error) and FN (False Negative, Type II error)
+In a binary classifier we have four scenarios, TP (True Positive), TN (True Negative), FP (False Positive, Type 1 error) and FN (False Negative, Type II error). This can be extended to k-classifier be rather you would have a k by k matrix. The count for each outcome is called a Confusion Matrix
 
 ```python
 from sklearn.dummy import DummyClassifier
@@ -23,3 +23,11 @@ dummy_majority = DummyClassifier(strategy = 'most_frequent' # predicts the most 
 dummy_majority.score(X_test, y_test)
 ```
 
+```python
+from sklearn.tree import DecisionTreeClassifier
+
+model = 
+md = model.fit(X_train, y_train)
+model_predicted = md.predict(X_test)
+confusion = confusion_matrix(y_test, model_predicted)
+```
