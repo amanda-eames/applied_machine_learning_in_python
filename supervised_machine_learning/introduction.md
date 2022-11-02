@@ -116,6 +116,23 @@ $$f(x,w,b) = sign(w \cdot x + b)$$
 * Con's for lower-dimentional data other methods are more suitable, data may not be linearly seperable. 
 * This approach can be used for multi-class classification, have a binary classifier for each class, either belong to the class or not. Then we get the training data, and passed to each of the class classifiers and then take the one with the highest probability.
 
+```python
+from sklearn.svm import SVC
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 0)
+clf = SVC(kernel = 'linear', C=1).fit(X_train, y_train)
+clf.score(X_train, y_train)
+clf.score(X_test, y_test)
+```
+
+```python
+# multi-class classification
+from sklearn.svm import LinearSVC
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 0)
+clf = LinearSVC(C=5, random_state = 67).fit(X_train, y_train)
+print('Coefficients:\n', clf.coef_)
+print('Intercepts:\n', clf.intercept_
+```
+
 ## Kernalised Support Vector Machines
 * This is used when linear support vector machines are not complex enough to capture the boundary. In essence, one way to think about what kernelized SVMs, is they take the original input data space and transform it to a new higher dimensional feature space, where it becomes much easier to classify the transform to data using a linear classifier.
 * Radial basis function kernal: what this looks like is all the point inside a certain radius are map to the same area in the feature space.  
@@ -126,6 +143,14 @@ $$f(x,w,b) = sign(w \cdot x + b)$$
 * Con's: Efficiency decreases as tranining set size increases, need careful nomalisation and parameter tuning, does not provide direct probabilty estimates, difficult to interpet why a prediction was made. 
 
 $$ K(x,x^{\prime}) = exp \[- \gamma \cdot ||x - x^{\prime} || ^2 \]$$
+
+```python
+from sklearn.svm import SVC
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 0)
+SVC(kernel='rbf', C=1), X_train3, y_train3)
+SVC(kernel = 'poly', degree = 3).fit(X_train, y_train)
+```
 
 ## Cross-Validation
 *  Cross-validation is a method that goes beyond evaluating a single model using a single Train/Test split of the data by using multiple Train/Test splits, each of which is used to train and evaluate a separate model
