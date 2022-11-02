@@ -31,3 +31,9 @@ md = model.fit(X_train, y_train)
 model_predicted = md.predict(X_test)
 confusion = confusion_matrix(y_test, model_predicted)
 ```
+
+### Confusion Matrices & Basic Evaluation Metrics
+
+Recall or True Positive Rate (TPR) is the fraction of all positive instances the classifer correctly identifies as positive 
+
+$$ Recall = TP/TP+FN $$
