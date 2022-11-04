@@ -56,6 +56,15 @@ classification_report(y_test, y_predicted, target_names=['not 1', '1'])
 
 ### Precision-recall and ROC curves
 
+```python
+y_scores_m = m.fit(X_train, y_train).decision_function(X_test)
+precision, recall, thresholds = precision_recall_curve(y_test, y_scores_m)
+plt.plot(precision, recall)
+plt.xlabel('precision')
+plt.ylabel('recall')
+plt.show()
+```
+
 ### Multi-Class Evaluation
 These are just an extention of the binary case, overall evaluation metrics are averaged across all classes and there are different ways to do this. 
 
