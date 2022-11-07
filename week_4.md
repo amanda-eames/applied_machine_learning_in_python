@@ -95,3 +95,11 @@ mlpreg = MLPRegressor(hidden_layer_sizes = [100,100],
 |* Form the basis of state of the art models and can be formed into advanced archetectures. | * Larger, more complex models require significant training time, data and customisation |
 | |  * Careful preprocessing of data is needed|
 || * A good choice when the features are of similar type but not when they are very different. |
+
+### Data Leakage
+When the data you're using to train the machine learning algorithm happens to include unexpected extra information about the very thing you're trying to predict.
+
+### Resources
+* https://techcrunch.com/2017/04/13/neural-networks-made-easy/
+* http://playground.tensorflow.org/
+* https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-core-concepts/
