@@ -1,7 +1,3 @@
-# Introduction
-
-This provides an introduction to common application of supervised learning algorithms and how to apply them with sklearn
-
 ## Terms:
 
 * Feature Representation: a set of techniques that allows a system to automatically discover the representations needed for feature detection or classification from raw data
