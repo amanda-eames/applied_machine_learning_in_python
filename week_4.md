@@ -38,5 +38,32 @@ print('Accuracy of RF classifier on test set: {:.2f}'.format(clf.score(X_test, y
 | Pros | Cons|
 |---|---|
 |* Widely used and excellent prediction performance | * The resulting models are difficult to interpret|
-|* Doesn't require careful normalisation of features or parametr tunning| * Like descion trees, not good choice for high dimentional tasks 
+|* Doesn't require careful normalisation of features or parameter tunning| * Like descion trees, not good choice for high dimentional tasks 
 |* Easily parallelised across multiple CPU's ||
+
+Key Parameters:
+* __n_estimator__: number of trees to use in the estimator (default 10)
+* __max_features__: has a strong effect on the performance, influences the diversity of trees in the forest (default works well in practice) 
+* __max_depth__: controls the depth of each tree. 
+* __n_jobs__: how many cores to use in parallel during training. 
+
+### Gradient Boosted Decision Trees
+
+Like random forest, gradient boosted trees used an ensemble of multiple tress to create more powerful prediction models for classification and regression. In training GBDT builds a series of small trees (shallow trees are known as weak learners), where each tree attempts to correct errors from the previous stage. The learning rate controls how hard the next tree trys to correct the errors preceeding it (high will create more complex trees)
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 0)
+clf = RandomForestClassifier(max_features = 8, random_state = 0)
+clf.fit(X_train, y_train)
+print('Accuracy of RF classifier on training set: {:.2f}'.format(clf.score(X_train, y_train)))
+print('Accuracy of RF classifier on test set: {:.2f}'.format(clf.score(X_test, y_test)))
+```
+
+| Pros | Cons|
+|---|---|
+|* Best off the shelf accuracy on many problems | * The resulting models are difficult to interpret|
+|* Using model for prediction requires only modest memory and is fast| * Like descion trees, not good choice for high dimentional tasks|
+|* Doesn't require careful normalisation of features |* Training can require significant computation|
+||* Requires careful parameter tunnning in particular the learning rate. |
