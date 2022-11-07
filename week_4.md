@@ -103,3 +103,6 @@ When the data you're using to train the machine learning algorithm happens to in
 * https://techcrunch.com/2017/04/13/neural-networks-made-easy/
 * http://playground.tensorflow.org/
 * https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-core-concepts/
+* https://medium.com/@colin.fraser/the-treachery-of-leakage-56a2d7c4e931
+* https://www.kaggle.com/c/the-icml-2013-whale-challenge-right-whale-redux/discussion/4865#25839#post25839
+* http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf
