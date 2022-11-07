@@ -1,3 +1,5 @@
+### Week 4: Supervised Machine Learning - Part 2
+
 This module covers more advanced supervised learning methods that include ensembles of trees (random forests, gradient boosted trees), and neural networks.
 .
 #### Naive Bayes Classifiers
