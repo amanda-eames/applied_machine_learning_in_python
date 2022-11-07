@@ -66,4 +66,4 @@ print('Accuracy of RF classifier on test set: {:.2f}'.format(clf.score(X_test, y
 |* Best off the shelf accuracy on many problems | * The resulting models are difficult to interpret|
 |* Using model for prediction requires only modest memory and is fast| * Like descion trees, not good choice for high dimentional tasks|
 |* Doesn't require careful normalisation of features |* Training can require significant computation|
-||* Requires careful parameter tunnning in particular the learning rate. |
+|* Can handle a mix of feature types|* Requires careful parameter tunnning in particular the learning rate. |
